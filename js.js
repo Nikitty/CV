@@ -124,4 +124,13 @@
 //   () => alert('Вы отменили выполнение.')
 // )
 
-console.log('УРААААА!!!')
+console.log('УРААААА!!')
+
+let user {
+  name = 'John',
+  surname = 'Smith',
+} 
+
+user.name = 'Pete'
+console.log(user.name)
+delete user.name
