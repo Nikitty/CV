@@ -126,10 +126,10 @@
 
 console.log('УРААААА!!')
 
-let user {
-  name = 'John',
-  surname = 'Smith',
-} 
+let user = {
+  name: 'John',
+  surname: 'Smith',
+}
 
 user.name = 'Pete'
 console.log(user.name)
