@@ -128,9 +128,79 @@ console.log('УРААААА!!')
 
 let user = {
   name: 'John',
-  surname: 'Smith',
 }
 
 user.name = 'Pete'
-console.log(user.name)
+// console.log(user.name)
 delete user.name
+// console.log(user.name)
+
+function isEmpty(obj) {
+  for (key in obj) return false
+  return true
+}
+
+console.log(isEmpty(user))
+
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130,
+}
+
+function sumObj(object) {
+  let sum = 0
+  for (key in object) {
+    sum += +object[key]
+  }
+  return sum
+}
+
+console.log(sumObj(salaries))
+
+let menu = {
+  width: 200,
+  heigth: 300,
+  title: 'My menu',
+}
+
+function multiplyNumeric(object) {
+  for (key in object) {
+    if (+object[key] !== true) continue
+    object[key] *= 2
+  }
+}
+
+multiplyNumeric(menu)
+console.log(menu)
+
+calculator = {
+  read() {
+    this.var1 = 2
+    this.var2 = 3
+  },
+  sum() {
+    return this.var1 + this.var2
+  },
+  mul() {
+    return this.var1 * this.var2
+  },
+}
+
+calculator.read()
+console.log(calculator.sum())
+console.log(calculator.mul())
+
+let ladder = {
+  step: 0,
+  up() {
+    this.step++
+  },
+  down() {
+    this.step--
+  },
+  showStep: function () {
+    // показывает текущую ступеньку
+    alert(this.step)
+  },
+}
